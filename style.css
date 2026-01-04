@@ -44,6 +44,33 @@ nav a:hover, nav a.active {
     color: #6D1122;
 }
 
+/* Header styling at the very top */
+header {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    background-color: #EBE5E2;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #6D1122;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 400; /* Sophisticated thin-medium weight */
+}
+
+/* Adjust nav to sit nicely under the header */
+nav {
+    background-color: #EBE5E2;
+    padding: 15px 10px 25px 10px;
+    border-bottom: 1px solid rgba(109, 17, 34, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 h1, h2, h3 {
     color: #6D1122;
     margin-top: 0;
@@ -59,4 +86,21 @@ h1, h2, h3 {
 .card {
     padding: 20px;
     /* Cards now have a slightly darker border for visibility */
-    border: 1px solid rgba(109,
+    border: 1px solid rgba(109, 17, 34, 0.15);
+    border-radius: 4px;
+}
+
+footer {
+    padding: 60px;
+    color: #6D1122;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    opacity: 0.6;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #6D1122;
+    opacity: 0.3;
+    margin: 20px auto;
+}
