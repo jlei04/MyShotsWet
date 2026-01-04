@@ -3,140 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wing & Jiajin | October 3, 2026</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    
+    <title>Wing & Jiajin | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-gold: #c5a059;
-            --text-dark: #2c2c2c;
-            --bg-cream: #faf9f6;
-            --white: #ffffff;
-        }
+        :root { --bg: #f9f7f2; --text: #222222; --accent: #70614d; }
+        body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 'Lato', sans-serif; }
+        
+        /* Navigation Bar - Stays same on all pages */
+        nav { display: flex; justify-content: center; padding: 40px 10px; background: var(--bg); }
+        nav a { text-decoration: none; color: var(--text); margin: 0 15px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 400; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+        nav a.active { border-bottom: 1px solid var(--accent); padding-bottom: 5px; }
 
-        * { box-sizing: border-box; scroll-behavior: smooth; }
-        body { margin: 0; font-family: 'Lato', sans-serif; background: var(--bg-cream); color: var(--text-dark); }
-        h1, h2, h3, .nav-link { font-family: 'Playfair Display', serif; }
-
-        /* Navigation */
-        nav {
-            position: sticky; top: 0; background: var(--white);
-            border-bottom: 1px solid #eee; z-index: 1000;
-            display: flex; justify-content: center; padding: 15px 0;
-        }
-        nav a {
-            margin: 0 15px; text-decoration: none; color: var(--text-dark);
-            font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;
-        }
-        nav a:hover { color: var(--primary-gold); }
-
-        /* Sections */
-        section { padding: 100px 20px; text-align: center; max-width: 1000px; margin: auto; }
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; background: var(--white); }
-        .hero h1 { font-size: 4rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; letter-spacing: 3px; }
-
-        /* Elements */
-        .countdown { font-size: 1.5rem; margin: 40px 0; color: var(--primary-gold); }
-        .btn {
-            background: var(--primary-gold); color: white; padding: 15px 40px;
-            text-decoration: none; border-radius: 2px; display: inline-block; margin-top: 20px;
-        }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { background: white; padding: 30px; border: 1px solid #eee; }
-
-        /* Gallery Mockup */
-        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-        .gallery-grid img { width: 100%; height: 300px; object-fit: cover; background: #ddd; }
-
-        @media (max-width: 768px) {
-            nav { flex-wrap: wrap; }
-            .hero h1 { font-size: 2.5rem; }
-        }
+        .hero { text-align: center; padding: 100px 20px; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 400; margin-bottom: 10px; }
+        .date-location { font-size: 1.1rem; letter-spacing: 4px; color: var(--accent); margin-top: 20px; }
+        .hero-img { width: 100%; max-width: 800px; height: 500px; background: #ddd; margin: 40px auto; object-fit: cover; display: block; }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#schedule">Schedule</a>
-        <a href="#travel">Travel</a>
-        <a href="#registry">Registry</a>
-        <a href="#party">Wedding Party</a>
-        <a href="#menu">Dinner Menu</a>
-        <a href="#rsvp">RSVP</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="travel.html">Travel</a>
+        <a href="registry.html">Registry</a>
+        <a href="party.html">Wedding Party</a>
+        <a href="menu.html">Dinner Menu</a>
+        <a href="rsvp.html">RSVP</a>
     </nav>
 
-    <section id="home" class="hero">
-        <p>JIAJIN LEI & WING YEE CHEUNG</p>
-        <h1>October 3, 2026</h1>
-        <p>BROOKLYN, NY</p>
-        <div class="countdown" id="timer">Loading Countdown...</div>
-        <a href="#rsvp" class="btn">RSVP ONLINE</a>
-    </section>
+    <div class="hero">
+        <h1>Jiajin Lei & Wing Yee Cheung</h1>
+        <div class="date-location">OCTOBER 3, 2026 • BROOKLYN, NY</div>
+        <img src="https://via.placeholder.com/800x500" alt="Engagement Photo" class="hero-img">
+    </div>
 
-    <section id="schedule">
-        <h2>Schedule</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Ceremony</h3>
-                <p>4:00 PM • The Boathouse</p>
-                <p>Semi-Formal Attire</p>
-            </div>
-            <div class="card">
-                <h3>Reception</h3>
-                <p>6:00 PM • Grand Ballroom</p>
-                <p>Dinner & Dancing to follow</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="travel">
-        <h2>Travel & Stay</h2>
-        <p>We have reserved a block of rooms at <b>The Brooklyn Bridge Hotel</b>.</p>
-        <a href="#" class="btn" style="background:none; color:var(--primary-gold); border: 1px solid var(--primary-gold);">Book Your Room</a>
-    </section>
-
-    <section id="registry">
-        <h2>Registry</h2>
-        <p>Your presence is the only gift we need! If you wish to give, we are registered at:</p>
-        <div class="grid">
-            <div class="card">Zola Cash Fund</div>
-            <div class="card">Crate & Barrel</div>
-        </div>
-    </section>
-
-    <section id="party">
-        <h2>Wedding Party</h2>
-        <div class="grid">
-            <div class="card"><b>Best Man</b><br>John Doe</div>
-            <div class="card"><b>Maid of Honor</b><br>Jane Smith</div>
-        </div>
-    </section>
-
-    <section id="menu">
-        <h2>Dinner Menu</h2>
-        <p><b>Entrée Options</b></p>
-        <p>Miso Glazed Sea Bass • Braised Short Rib • Wild Mushroom Risotto</p>
-    </section>
-
-    <section id="rsvp">
-        <h2>RSVP</h2>
-        <p>Please respond by September 1st, 2026</p>
-        <a href="YOUR_FORM_LINK" class="btn">RSVP HERE</a>
-    </section>
-
-    <script>
-        // Countdown Logic
-        const weddingDate = new Date("Oct 3, 2026 16:00:00").getTime();
-        setInterval(function() {
-            const now = new Date().getTime();
-            const distance = weddingDate - now;
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("timer").innerHTML = days + "d " + hours + "h remaining";
-        }, 1000);
-    </script>
 </body>
 </html>
