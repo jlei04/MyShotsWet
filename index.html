@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wing & Jiajin | Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <title>Schedule | Wing & Jiajin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root { --bg: #f9f7f2; --text: #222222; --accent: #70614d; }
-        body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 'Lato', sans-serif; }
-        
-        /* Navigation Bar - Stays same on all pages */
-        nav { display: flex; justify-content: center; padding: 40px 10px; background: var(--bg); }
-        nav a { text-decoration: none; color: var(--text); margin: 0 15px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 400; transition: 0.3s; }
-        nav a:hover { color: var(--accent); }
+        body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 'Lato', sans-serif; text-align: center; }
+        nav { display: flex; justify-content: center; padding: 40px 10px; }
+        nav a { text-decoration: none; color: var(--text); margin: 0 15px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
         nav a.active { border-bottom: 1px solid var(--accent); padding-bottom: 5px; }
 
-        .hero { text-align: center; padding: 100px 20px; }
-        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 400; margin-bottom: 10px; }
-        .date-location { font-size: 1.1rem; letter-spacing: 4px; color: var(--accent); margin-top: 20px; }
-        .hero-img { width: 100%; max-width: 800px; height: 500px; background: #ddd; margin: 40px auto; object-fit: cover; display: block; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-top: 60px; font-weight: 400; }
+        .event { margin: 60px auto; max-width: 600px; padding: 20px; border-bottom: 1px solid #e0e0e0; }
+        .time { font-weight: bold; letter-spacing: 2px; color: var(--accent); }
+        .location { font-style: italic; margin-top: 10px; }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="schedule.html">Schedule</a>
+        <a href="index.html">Home</a>
+        <a href="schedule.html" class="active">Schedule</a>
         <a href="travel.html">Travel</a>
         <a href="registry.html">Registry</a>
         <a href="party.html">Wedding Party</a>
@@ -33,10 +30,20 @@
         <a href="rsvp.html">RSVP</a>
     </nav>
 
-    <div class="hero">
-        <h1>Jiajin Lei & Wing Yee Cheung</h1>
-        <div class="date-location">OCTOBER 3, 2026 • BROOKLYN, NY</div>
-        <img src="https://via.placeholder.com/800x500" alt="Engagement Photo" class="hero-img">
+    <h2>Schedule</h2>
+
+    <div class="event">
+        <div class="time">4:00 PM</div>
+        <h3>The Ceremony</h3>
+        <p>The Boathouse at Prospect Park</p>
+        <div class="location">101 Ocean Ave, Brooklyn, NY 11225</div>
+    </div>
+
+    <div class="event">
+        <div class="time">6:00 PM</div>
+        <h3>The Reception</h3>
+        <p>Dinner, Drinks, and Dancing</p>
+        <div class="location">Main Ballroom</div>
     </div>
 
 </body>
