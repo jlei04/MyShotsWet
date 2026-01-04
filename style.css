@@ -42,9 +42,6 @@ nav a:hover, nav a.active {
     /* Updated .content to match your specific colors */
     background-color: #EBE5E2;
     color: #6D1122;
-    /* Added a delicate border instead of a shadow for a premium feel */
-    border: 1px solid rgba(109, 17, 34, 0.2);
-    border-radius: 4px;
 }
 
 h1, h2, h3 {
