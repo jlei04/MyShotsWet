@@ -3,48 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule | Wing & Jiajin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <title>Wing & Jiajin | October 3, 2026</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    
     <style>
-        :root { --bg: #f9f7f2; --text: #222222; --accent: #70614d; }
-        body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 'Lato', sans-serif; text-align: center; }
-        nav { display: flex; justify-content: center; padding: 40px 10px; }
-        nav a { text-decoration: none; color: var(--text); margin: 0 15px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
-        nav a.active { border-bottom: 1px solid var(--accent); padding-bottom: 5px; }
+        :root {
+            --bg-cream: #F9F7F2; /* Exact Zola background */
+            --text-main: #222222;
+            --accent-sage: #747D63; /* Wing & Jiajin signature green */
+            --white: #ffffff;
+        }
 
-        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-top: 60px; font-weight: 400; }
-        .event { margin: 60px auto; max-width: 600px; padding: 20px; border-bottom: 1px solid #e0e0e0; }
-        .time { font-weight: bold; letter-spacing: 2px; color: var(--accent); }
-        .location { font-style: italic; margin-top: 10px; }
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; font-family: 'Montserrat', sans-serif; 
+            background-color: var(--bg-cream); color: var(--text-main); 
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed; top: 0; width: 100%; background: var(--white);
+            display: flex; justify-content: center; align-items: center;
+            padding: 25px 0; border-bottom: 1px solid #edebe6; z-index: 1000;
+        }
+        nav a {
+            margin: 0 18px; text-decoration: none; color: var(--text-main);
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
+            cursor: pointer; font-weight: 400;
+        }
+        nav a:hover { color: var(--accent-sage); }
+
+        /* Multi-Page Views */
+        .page { display: none; padding: 140px 20px 80px; min-height: 100vh; text-align: center; max-width: 1100px; margin: auto; }
+        .page.active { display: block; animation: fadeIn 0.4s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* Typography & Components */
+        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; margin: 0; }
+        .hero-names { font-size: 3.5rem; margin: 20px 0; letter-spacing: -1px; }
+        .sub-header { text-transform: uppercase; letter-spacing: 5px; font-size: 0.9rem; margin-bottom: 15px; }
+        
+        .btn {
+            background: var(--accent-sage); color: white; padding: 18px 50px;
+            text-decoration: none; display: inline-block; margin-top: 30px;
+            text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;
+            border: none; cursor: pointer;
+        }
+
+        .section-card { background: white; padding: 60px; margin: 20px auto; border: 1px solid #edebe6; max-width: 800px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px; }
+
+        /* Gallery Styles */
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 40px; }
+        .gallery-item { aspect-ratio: 1 / 1; background: #eee; overflow: hidden; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+
+        @media (max-width: 768px) {
+            nav { flex-wrap: wrap; padding: 15px; }
+            nav a { margin: 8px; font-size: 0.65rem; }
+            .hero-names { font-size: 2.2rem; }
+            .gallery-grid { grid-template-columns: 1fr 1fr; }
+        }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="schedule.html" class="active">Schedule</a>
-        <a href="travel.html">Travel</a>
-        <a href="registry.html">Registry</a>
-        <a href="party.html">Wedding Party</a>
-        <a href="menu.html">Dinner Menu</a>
-        <a href="rsvp.html">RSVP</a>
+    <nav id="main-nav">
+        <a onclick="navigateTo('home')">Home</a>
+        <a onclick="navigateTo('schedule')">Schedule</a>
+        <a onclick="navigateTo('travel')">Travel</a>
+        <a onclick="navigateTo('registry')">Registry</a>
+        <a onclick="navigateTo('party')">Wedding Party</a>
+        <a onclick="navigateTo('gallery')">Gallery</a>
+        <a onclick="navigateTo('menu')">Dinner Menu</a>
+        <a onclick="navigateTo('rsvp')">RSVP</a>
     </nav>
 
-    <h2>Schedule</h2>
-
-    <div class="event">
-        <div class="time">4:00 PM</div>
-        <h3>The Ceremony</h3>
-        <p>The Boathouse at Prospect Park</p>
-        <div class="location">101 Ocean Ave, Brooklyn, NY 11225</div>
+    <div id="home" class="page active">
+        <p class="sub-header">Wing Yee Cheung & Jiajin Lei</p>
+        <h1 class="hero-names">October 3, 2026</h1>
+        <p class="sub-header">Brooklyn, NY</p>
+        <hr style="width: 40px; border: 0.5px solid var(--accent-sage); margin: 40px auto;">
+        <div id="countdown" style="font-size: 1.2rem; font-family: 'Playfair Display'; margin-bottom: 30px;">Calculating...</div>
+        <button class="btn" onclick="navigateTo('rsvp')">RSVP</button>
     </div>
 
-    <div class="event">
-        <div class="time">6:00 PM</div>
-        <h3>The Reception</h3>
-        <p>Dinner, Drinks, and Dancing</p>
-        <div class="location">Main Ballroom</div>
+    <div id="schedule" class="page">
+        <h2 class="hero-names">Schedule</h2>
+        <div class="section-card">
+            <p class="sub-header">Ceremony</p>
+            <h3>4:30 PM</h3>
+            <p>The Picnic House, Prospect Park<br>Brooklyn, NY</p>
+            <p><i>Attire: Semi-Formal</i></p>
+        </div>
+        <div class="section-card">
+            <p class="sub-header">Reception</p>
+            <h3>6:00 PM</h3>
+            <p>Dinner, Drinks, and Dancing to follow</p>
+        </div>
     </div>
 
-</body>
-</html>
+    <div id="travel" class="page">
+        <h2 class="hero-names">Travel</h2>
+        <div class="section-card">
+            <h3>Accommodations</h3>
+            <p>We've reserved a block of rooms at the 1 Hotel Brooklyn Bridge.</p>
+            <a href="#" class="btn">View Hotel</a>
+        </div>
+        <div class="section-card">
+            <h3>Transportation</h3>
+            <p>A shuttle will be provided from the hotel to the venue starting at 3:45 PM.</p>
+        </div>
+    </div>
+
+    <div id="registry" class="page">
+        <h2 class="hero-names">Registry</h2>
+        <p>Your presence is the greatest gift. If you wish to contribute elsewhere:</p>
+        <div class="grid">
+            <div class="section-card"><h3>Zola Cash Fund</h3><p>Honeymoon & Home</p></div>
+            <div class="section-card"><h3>Crate & Barrel</h3><p>Home Essentials</p></div>
+        </div>
+    </div>
+
+    <div id="party" class="page">
+        <h2 class="hero-names">Wedding Party</h2>
+        <div class="grid">
+            <div class="section-card"><h3>Maid of Honor</h3><p>Name Here</p></div>
+            <div class="section-card"><h3>Best Man</h3><p>Name Here</p></div>
+        </div>
+    </div>
