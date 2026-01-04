@@ -1,5 +1,15 @@
 /* style.css */
 body {
+    background-image:
+        url("docs/borderflowers.png"),
+        url("docs/borderflowers2.png");
+    background-repeat:
+        no-repeat,
+        no-repeat;       /* Prevents the image from tiling */
+    background-position:
+        right 200px,
+        bottom left;
+    background-size: 20%;
     font-family: 'Playfair Display', serif;
     margin: 0;
     line-height: 1.6;
@@ -15,6 +25,23 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+/* Header styling at the very top */
+header {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    background-color: #EBE5E2;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #6D1122;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 400; /* Sophisticated thin-medium weight */
 }
 
 nav a {
@@ -43,23 +70,6 @@ nav a:hover, nav a.active {
     /* Updated .content to match your specific colors */
     background-color: #EBE5E2;
     color: #6D1122;
-}
-
-/* Header styling at the very top */
-header {
-    padding-top: 50px;
-    padding-bottom: 10px;
-    background-color: #EBE5E2;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 3em;
-    margin: 0;
-    color: #6D1122;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    font-weight: 400; /* Sophisticated thin-medium weight */
 }
 
 /* Adjust nav to sit nicely under the header */
