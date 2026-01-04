@@ -36,6 +36,7 @@ nav a:hover, nav a.active {
 }
 
 .content {
+    font-family: 'Playfair Display', serif;
     max-width: 900px;
     margin: 60px auto;
     padding: 40px;
