@@ -3,18 +3,15 @@ body {
     font-family: 'Playfair Display', serif;
     margin: 0;
     line-height: 1.6;
-    /* Background set to #EBE5E2 */
-    background-color: #EBE5E2;
-    /* Primary font color set to #6D1122 */
-    color: #6D1122;
+    background-color: #EBE5E2; /* Site Background */
+    color: #6D1122;           /* Text Color */
     text-align: center;
 }
 
 nav {
-    /* Keeping nav white for contrast, or change to #EBE5E2 if you want it seamless */
-    background: #ffffff;
+    background-color: #EBE5E2; /* Nav matches body for a seamless look */
     padding: 25px 10px;
-    border-bottom: 1px solid #d1ccc9;
+    border-bottom: 1px solid rgba(109, 17, 34, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -23,22 +20,16 @@ nav {
 nav a {
     margin: 0 12px;
     text-decoration: none;
-    /* Nav links also use your primary color */
     color: #6D1122;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.85em;
     letter-spacing: 1px;
     transition: 0.3s;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
-nav a:hover {
-    opacity: 1;
-}
-
-/* Pro-Tip Active State using the font color */
-nav a.active {
+nav a:hover, nav a.active {
     opacity: 1;
     border-bottom: 2px solid #6D1122;
     padding-bottom: 5px;
@@ -48,6 +39,27 @@ nav a.active {
     max-width: 900px;
     margin: 60px auto;
     padding: 40px;
-    /* Slightly lighter than the background to make it pop, or keep transparent */
-    background: #ffffff;
-    box-shadow: 0 10px 30px rgba(109,
+    /* Updated .content to match your specific colors */
+    background-color: #EBE5E2;
+    color: #6D1122;
+    /* Added a delicate border instead of a shadow for a premium feel */
+    border: 1px solid rgba(109, 17, 34, 0.2);
+    border-radius: 4px;
+}
+
+h1, h2, h3 {
+    color: #6D1122;
+    margin-top: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    padding: 20px;
+    /* Cards now have a slightly darker border for visibility */
+    border: 1px solid rgba(109,
