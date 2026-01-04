@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wing & Jiajin | Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body { margin: 0; background-color: #F9F7F2; color: #222; font-family: 'Montserrat', sans-serif; text-align: center; }
-        nav { position: sticky; top: 0; background: white; padding: 20px; border-bottom: 1px solid #e0ddd5; z-index: 100; }
-        nav a { margin: 0 15px; text-decoration: none; color: #222; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; }
-        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; background: white; padding: 0 20px; }
-        h1 { font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 400; margin: 10px 0; }
-        .subtitle { letter-spacing: 5px; font-size: 0.9rem; }
-        .countdown { font-family: 'Playfair Display', serif; font-size: 2rem; color: #747D63; margin: 30px 0; }
-        .btn { background: #747D63; color: white; padding: 15px 40px; text-decoration: none; display: inline-block; letter-spacing: 2px; }
+        :root { --bg: #F9F7F2; --text: #222; --accent: #747D63; --white: #ffffff; }
+        body { margin: 0; font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); text-align: center; }
+        nav { position: sticky; top: 0; background: var(--white); padding: 25px 0; border-bottom: 1px solid #eee; z-index: 1000; display: flex; justify-content: center; }
+        nav a { margin: 0 15px; text-decoration: none; color: var(--text); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; }
+        nav a:hover { color: var(--accent); }
+        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0 20px; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 400; margin: 10px 0; }
+        .subtitle { letter-spacing: 5px; font-size: 0.8rem; text-transform: uppercase; }
+        .btn { background: var(--accent); color: white; padding: 16px 45px; text-decoration: none; display: inline-block; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; margin-top: 30px; }
     </style>
 </head>
 <body>
@@ -28,20 +29,10 @@
         <a href="rsvp.html">RSVP</a>
     </nav>
     <div class="hero">
-        <p class="subtitle">WING YEE CHEUNG & JIAJIN LEI</p>
+        <p class="subtitle">Jiajin Lei & Wing Yee Cheung</p>
         <h1>October 3, 2026</h1>
-        <p class="subtitle">BROOKLYN, NY</p>
-        <div class="countdown" id="timer"></div>
+        <p class="subtitle">Brooklyn, NY</p>
         <a href="rsvp.html" class="btn">RSVP</a>
     </div>
-    <script>
-        const weddingDate = new Date("Oct 3, 2026 16:30:00").getTime();
-        setInterval(() => {
-            const now = new Date().getTime();
-            const d = weddingDate - now;
-            const days = Math.floor(d / (1000 * 60 * 60 * 24));
-            document.getElementById("timer").innerHTML = days + " DAYS TO GO";
-        }, 1000);
-    </script>
 </body>
 </html>
